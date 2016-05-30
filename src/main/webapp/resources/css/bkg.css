@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 avr. 2016, 15:32:46
+    Author     : DGSI
+*/
+ #test{
+           background-image: url('images/frame48.gif');
+        }
+
+ #menubar{
+       border: 0;
+       background:#ffffff;
+       font:  bold 12px "Lucida Grande", sans-serif;
+   }

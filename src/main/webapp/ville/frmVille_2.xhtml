@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../TempCss.xhtml">
+
+            <ui:define name="content">
+                <center>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <h:form> 
+                        <i>MAJ de la Ville</i>
+                        <br/>
+                        <div id="tbar"  style=" width: 400px;">
+                            <h:commandButton value="Nouveau" action="#{villeControllerClt.afficherBtNouveau()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{villeControllerClt.selected==null}" /> 
+                            <h:commandButton value="Enregistrer" action="#{villeControllerClt.maj()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{villeControllerClt.afficherBtEnregistrer()}"/>
+                            <h:commandButton value="Fermer" action="#{villeControllerClt.fermer()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{villeControllerClt.selected==null}"/>
+                            <h:commandButton value="Modifier" action="#{villeControllerClt.afficherBtModif()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{villeControllerClt.selected==null}" /> 
+                            <h:commandButton value="Rechercher" action="#{villeControllerClt.recherchera()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{villeControllerClt.afficherBtRechercher()}" /> 
+                             <h:commandButton value="Annuler" action="#{villeControllerClt.annuler()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{villeControllerClt.selected!=null}" /> 
+                             <h:commandButton value="Supprimer" action="#{villeControllerClt.afficherBtSupprimer()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{villeControllerClt.afficherBtSupp()}" /> 
+                        </div>    
+                    <h:panelGrid rendered="#{villeControllerClt.selected!=null}" style=" opacity: 0.8;border: 1px solid #4E9AE1;padding: 10px 65px 5px 60px;width: 550px; background: #ffffff">
+                      
+                    <h:panelGrid columns="2" >
+                        <h:outputLabel style=" font-style: italic; color:  blue;font-size: 12px; " value="codeVille"/> <h:inputText value="#{villeControllerClt.selected.codeVille}"  autocomplete="off" size="30" immediate="true" required="true" requiredMessage="Code de la ville Obligatoire"/>
+                        <h:outputLabel style=" font-style: italic; color:  blue;font-size: 12px; " value="nom de la Ville"/> <h:inputText value="#{villeControllerClt.selected.nomVille}" autocomplete="off" size="30"  immediate="true"/>
+                        <h:outputLabel style=" font-style: italic; color:  blue;font-size: 12px; "  value="code du Pays"/> <h:inputText value="#{villeControllerClt.selected.codePays}" autocomplete="off" size="30" immediate="true"/>
+                      
+                    </h:panelGrid> 
+                      
+                </h:panelGrid>
+                        <h:messages style="color: #B00000;font-size: 9pt;"/>
+                 </h:form>
+                </center>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

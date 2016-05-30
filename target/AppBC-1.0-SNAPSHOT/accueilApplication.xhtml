@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+          
+         <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Application de Gestion</title>
+            </f:facet>
+        <h:outputStylesheet name="./css/bkg.css"/>
+        <style type="text/css">
+      <!--
+            .menuba{
+                 border: 0;
+       background:#ffffff;  
+       font:   bold italic 4px "Lucida Grande", sans-serif;
+            }
+            .menuItem{
+                
+                font:   bold italic 2px "Lucida Grande", sans-serif;
+                 max-height: 1%;
+                 
+            }
+  -->
+        </style>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true">
+         <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                 <h:form>    Application de Gestion
+                    <hr/>
+                    <p:menubar  class="menuba" autoDisplay="true" >
+                        <p:submenu label="Fichier" >
+                           
+                            <p:menuitem  class="menuItem" value="Ouvrir" > 
+                                
+                            </p:menuitem>
+                                
+                            <p:menuitem class="menuItem" value="Inserrer">
+                            </p:menuitem>
+                             </p:submenu>
+                        <p:submenu  label="Editer" >
+                            <p:menuitem class="menuItem" value="Ouvrir">
+                                
+                            </p:menuitem>
+                                
+                            <p:menuitem class="menuItem" value="Inserrer">
+                            </p:menuitem>
+                          </p:submenu>
+                            
+                        
+                        </p:menubar>
+                    
+                        </h:form>
+         </p:layoutUnit>
+            <p:layoutUnit position="south" size="60" closable="true" collapsible="true" resizable="true">
+                    Footer
+             </p:layoutUnit>
+            <p:layoutUnit position="west" size="175" header="Left" collapsible="true"> resizable="true"
+                
+            </p:layoutUnit>
+             <p:layoutUnit position="east" size="175" header="right" collapsible="true" resizable="true">
+                
+            </p:layoutUnit> 
+            <p:layoutUnit position="center" resizable="true">
+                <p:graphicImage alt="Image de fond" value=" #{resource['images/mef2.JPG']}" width="1100"/>
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
+

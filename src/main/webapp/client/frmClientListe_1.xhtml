@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../TempCss.xhtml">
+
+            <ui:define name="content">
+                <center>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <h:form> 
+                        <i>MAJ de la client</i>
+                        <br/>
+                        <div id="tbar"  style=" width: 400px;">
+                            <h:commandButton value="Nouveau" action="#{clientControllerClt.afficherBtNouveau()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{clientControllerClt.selected==null}" /> 
+                            <h:commandButton value="Enregistrer" action="#{clientControllerClt.maj()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{clientControllerClt.afficherBtEnregistrer()}"/>
+                            <h:commandButton value="Fermer" action="#{clientControllerClt.fermer()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{clientControllerClt.selected==null}"/>
+                            <h:commandButton value="Modifier" action="#{clientControllerClt.afficherBtModif()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{clientControllerClt.selected==null}" /> 
+                            <h:commandButton value="Rechercher" action="#{clientControllerClt.recherchera()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{clientControllerClt.afficherBtRechercher()}" /> 
+                             <h:commandButton value="Annuler" action="#{clientControllerClt.annuler()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{clientControllerClt.selected!=null}" /> 
+                             <h:commandButton value="Supprimer" action="#{clientControllerClt.afficherBtSupprimer()}"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " rendered="#{clientControllerClt.afficherBtSupp()}" /> 
+                        </div>  
+                       
+                            
+                        
+                         <h:panelGrid columns="2">
+                    <h:panelGrid rendered="#{clientControllerClt.selected!=null}" style=" opacity: 0.8;border: 1px solid #4E9AE1;padding: 10px 65px 5px 60px;width: 550px; background: #ffffff">
+                      
+                    <h:panelGrid columns="2" >
+                        <h:outputLabel style=" font-style: italic; color:  blue;font-size: 12px; " value="codeclient"/> <h:inputText value="#{clientControllerClt.selected.codeClient}"  autocomplete="off" size="30" immediate="true" required="true" requiredMessage="Code de la client Obligatoire"/>
+                        <h:outputLabel style=" font-style: italic; color:  blue;font-size: 12px; " value="nom de la client"/> <h:inputText value="#{clientControllerClt.selected.nomClt}" autocomplete="off" size="30"  immediate="true"/>
+                        <h:outputLabel style=" font-style: italic; color:  blue;font-size: 12px; "  value="prenom du Client"/> <h:inputText value="#{clientControllerClt.selected.prenomClt}" autocomplete="off" size="30" immediate="true"/>
+                        <h:outputLabel style=" font-style: italic; color:  blue;font-size: 12px; "  value="Tel du client"/> <h:inputText value="#{clientControllerClt.selected.telClt}" autocomplete="off" size="30" immediate="true"/>
+                    </h:panelGrid> 
+                      
+                </h:panelGrid> 
+                        <h:panelGrid rendered="#{clientControllerClt.afficherListe()}" style=" opacity: 0.8;border: 1px solid #4E9AE1;padding: 10px 65px 5px 60px;width: 450px; max-height:200px;  background: #ffffff">
+                            <h:dataTable rendered="#{clientControllerClt.liste!=null}"  value="#{clientControllerClt.liste}" var="lid" style="max-height:200px;"  rowClasses="row1,row2" headerClass="heading"  title="Liste de client" >
+                                <h:column >
+                                    <f:facet name="header">
+                                        <h:outputLabel value="Id"/>
+                                    </f:facet>    
+                                    <h:outputText value="#{lid.id}"/>
+                                </h:column>
+                                <h:column >
+                                    <f:facet name="header">
+                                        <h:outputLabel value="Code de la client"/>
+                                    </f:facet>    
+                                    <h:outputText value="#{lid.codeClient}"/>
+                                </h:column>
+                                <h:column >
+                                    <f:facet name="header">
+                                        <h:outputLabel value="Nom de la client"/>
+                                    </f:facet>    
+                                    <h:outputText value="#{lid.nomClt}"/>
+                                </h:column>
+                               <h:column >
+                                    <f:facet name="header">
+                                        <h:outputLabel value="prenom de la client"/>
+                                    </f:facet>    
+                                    <h:outputText value="#{lid.prenomClt}"/>
+                                </h:column> 
+                                <h:column >
+                                    <f:facet name="header">
+                                        <h:outputLabel value="Telephone de la client"/>
+                                    </f:facet>    
+                                    <h:outputText value="#{lid.telClt}"/>
+                                </h:column>
+                            </h:dataTable>
+                        </h:panelGrid>
+                        </h:panelGrid>
+                        <h:messages style="color: #B00000;font-size: 9pt;"/>
+                        
+                       
+                 </h:form>
+                  
+                </center>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

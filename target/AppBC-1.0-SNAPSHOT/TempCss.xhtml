@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      >
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <title>Application de Gestion</title>
+    </h:head>
+
+    <h:body>
+
+        <div id="top">
+              <h:form>    Application de Gestion
+                    <hr/>
+                    <p:menubar class="menuba" autoDisplay="true" >
+                        
+                        <p:submenu label="Fichier">
+                            <p:menuitem  class="menuItem" value="Ouvrir" action="accueilApplication" > 
+                                
+                            </p:menuitem>
+                                
+                            <p:menuitem class="menuItem" value="Maj Pays" action="/pays/frmPays">
+                            </p:menuitem> 
+                            <p:menuitem class="menuItem" value="Maj Region" action="/region/frmRegion"/>
+                            <p:menuitem class="menuItem" value="Maj Ville" action="/ville/frmVille"/>
+                            
+                            <p:menuitem class="menuItem" value="Maj Ville" action="/ville/frmVille_1"/>
+                            <p:menuitem class="menuItem" value="Maj Ville Client" action="/ville/frmVille_2"/>
+                            <p:menuitem class="menuItem" value="Maj Continent" action="/continent/frmContinent"/> 
+                            <p:menuitem class="menuItem" value="Quitter" action="/loginApplication"/>
+                            <p:menuitem class="menuItem" value="VilleListe" action="/ville/frmVilleListe"/> 
+                            <p:menuitem class="menuItem" value="Ville Liste1" action="/ville/frmVilleListe_1"/>
+                            <p:menuitem class="menuItem" value="Client Liste1" action="/client/frmClientListe_1"/>
+                            
+                             
+                             <p:menuitem class="menuItem" value="Maj Client" action="/client/frmClientListe"/>
+                             </p:submenu>
+                         <p:submenu  label="Editer" >
+                            <p:menuitem class="menuItem" value="Ouvrir">
+                                
+                            </p:menuitem>
+                                
+                            <p:menuitem class="menuItem" value="Inserrer">
+                            </p:menuitem>
+                          </p:submenu>
+                            
+                        
+                        </p:menubar>
+                    
+                        </h:form>
+           
+        </div>
+        
+                    
+        <div id="content" class="right_content">
+                    <ui:insert name="content">Content</ui:insert>
+       </div>
+            
+        
+        <div id="bottom">
+            <center> Copyrigth (C) MINEFID 2016</center>
+        </div>
+
+    </h:body>
+
+</html>

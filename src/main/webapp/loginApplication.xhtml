@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+         <h:outputStylesheet name="./css/bkg.css"/>
+        
+        <title>Application de Gestion</title>  
+        <style type="text/css">
+            <!--
+  body {
+	font: normal 11px "Lucida Grande", sans-serif;
+	background: url('resources/images/mef3.JPG') no-repeat
+            scroll center -400px #dddddd;
+	color: #343030;
+  }
+.label{
+    font: bold 12px "Lucida Grande", sans-serif;
+	text-align: right;
+	color:   #454545;
+	margin: 0 4px 0 0;
+	width: 100px;
+}
+.login {
+	background: #fff;
+	opacity: 0.8;
+	filter: alpha(opacity =   80);
+	border: 1px solid #4E9AE1;
+	padding: 20px 75px 5px 70px;
+	width: 250px;
+        margin: 0px 170px 0px 170px;
+}
+.button {
+	cursor: pointer;
+	color: #454545;
+	font-size: 10px;
+	background: #CECFD1 url('resources/images/buttons.png')
+		repeat-x scroll left top;
+	border: 1px solid #BFC5CB;
+	padding: 2px 5px 2px 5px;
+	margin: 5px 10px 10px 0;
+}
+.button:hover {
+	border: 1px solid #92999E;
+	color: #000000;
+}
+-->
+
+        </style>
+    </h:head>
+    <h:body>
+       
+        <div align="center">
+            <h:form  > 
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            
+            
+            <h:panelGrid columns="1"   width="250"  class="login"  style="  margin-top: 600; margin-left: 500; border: solid #ffffff;  alignment-adjust: central;">  
+         <h:messages style="color: #B00000;font-size: 9pt;"/>
+         <h:panelGrid columns="2">
+           
+             <h:outputLabel class="label" value="login"/> <h:inputText value="ABC" size="22" autocomplete="off" />
+            <h:outputLabel class="label" value=" Mot de Passe"/> <h:inputSecret value="adfgsert" autocomplete="off" size="22"/> 
+            <h:commandButton  value="Se connecter"  style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; "  action="index"/> <h:commandButton style="font-style: italic; font-size:  12px; color: white; border-radius: 15%; background-color:  #036fab; " value="Annuler"/>
+        </h:panelGrid> 
+        
+      </h:panelGrid> 
+           
+       </h:form>
+         </div>
+    </h:body>
+</html>
+

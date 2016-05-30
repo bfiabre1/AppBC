@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+         <h:outputStylesheet name="./css/bkg.css"/>
+        
+        <title>Facelet Title</title>  
+        <style type="text/css">
+            <!--
+  body {
+	font: normal 11px "Lucida Grande", sans-serif;
+	background: url('resources/images/mef3.JPG') no-repeat
+            scroll center -400px #dddddd;
+	color: #343030;
+  }
+.label{
+    font: bold 12px "Lucida Grande", sans-serif;
+	text-align: right;
+	color:   #454545;
+	margin: 0 4px 0 0;
+	width: 100px;
+}
+.login {
+	background: #fff;
+	opacity: 0.8;
+	filter: alpha(opacity =   80);
+	border: 1px solid #4E9AE1;
+	padding: 20px 75px 5px 70px;
+	width: 250px;
+        margin: 0px 170px 0px 170px;
+}
+-->
+
+        </style>
+    </h:head>
+    <h:body>
+       
+        <div align="center" class="body">
+            <h:form class="body" > 
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            
+            
+            <h:panelGrid columns="1"   width="250"  class="login"  style="  margin-top: 600; margin-left: 500; border: solid #ffffff;  alignment-adjust: central; background-image: url('images/javafx-loading-100x100.gif')">  
+        <h:panelGrid columns="2">
+           
+            <h:outputLabel class="label" value="login"/> <h:inputText value="ABC" />
+            <h:outputLabel class="label" value=" Mot de Passe"/> <h:inputSecret value="adfgsert"/> 
+            <h:commandButton value="Se connecter"  action="index"/> <h:commandButton value="Annuler"/>
+        </h:panelGrid> 
+        
+      </h:panelGrid> 
+           
+       </h:form>
+         </div>
+    </h:body>
+</html>
+
